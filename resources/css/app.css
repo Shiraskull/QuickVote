@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+.filament-form input, .filament-form textarea {
+    color: black !important;
+}
