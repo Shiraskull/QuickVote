@@ -7,10 +7,18 @@
         <title>{{ $title ?? 'Page Title' }}</title>
         @vite('resources/css/app.css')
     </head>
-    <body class="bg-gradient-to-b from-blue-50 to-white min-h-screen">
-        @livewire('header')
-        {{ $slot }}
-        @livewire('footer')
+    <body class="bg-gradient-to-b flex flex-col  from-blue-50 to-white min-h-screen">
+        @if (request()->route()->getName() !== 'login')
+            @livewire('header')
+        @endif
+        <main class=" flex-grow">
+            {{ $slot }}
+        </main>
+
+        @if (request()->route()->getName() !== 'login')
+            @livewire('footer')
+        @endif
+
         @vite('resources/js/app.js')
     </body>
 </html>
