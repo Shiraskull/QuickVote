@@ -56,10 +56,15 @@ class Login extends Component
 
         // Login berhasil
         session()->regenerate();
-        Notification::make()
-            ->title('Login berhasil')
-            ->success()
-            ->send();
+        // Notification::make()
+        //     ->title('Login berhasil')
+        //     ->success()
+        //     ->send();
+
+        session()->flash('modal', [
+            'title' => 'Berhasil Login',
+            'message' => 'Selamat datang kembali!',
+        ]);
         return redirect()->intended('/');
     }
 
@@ -75,6 +80,7 @@ class Login extends Component
 
     public function render()
     {
+
         return view('livewire.login');
     }
 }

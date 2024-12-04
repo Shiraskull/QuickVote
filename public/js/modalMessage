@@ -1,0 +1,8 @@
+        function closeModal() {
+            document.getElementById('loginModal').style.display = 'none';
+        }
+// function editProfile(){
+//     const form = document.getElementById('formProfile');
+//     form.classList.toggle('hidden');
+// }
+

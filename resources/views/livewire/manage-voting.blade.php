@@ -1,12 +1,12 @@
 <div class="p-10 space-y-2">
-    <a href="{{ route('voting-create') }}">
-        <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl px-4 py-2 flex items-center space-x-2 shadow-md transform transition-all duration-300 ease-in-out hover:scale-105">
+    {{-- <a href="{{ route('voting-create') }}"> --}}
+        <button wire:click='createVoting' class="bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl px-4 py-2 flex items-center space-x-2 shadow-md transform transition-all duration-300 ease-in-out hover:scale-105">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
             </svg>
             <span>New Voting</span>
         </button>
-    </a>
+    {{-- </a> --}}
 
     <div class="grid grid-cols-4 gap-4">
         @foreach ($votings as $item)

@@ -9,7 +9,7 @@ use App\Livewire\Profile;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/',Home::class);
+Route::get('/',Home::class)->name('home');
 Route::get('/manage-voting',ManageVoting::class)->name('manage-voting');
 Route::get('/detail-voting/{slug}',DetailVoting::class)->name('detail-voting');
 Route::get('/voting/create',CreateVoting::class)->name('voting-create');

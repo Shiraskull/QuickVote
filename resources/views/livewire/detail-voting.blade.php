@@ -7,10 +7,10 @@
             </div>
             <div class="mt-4 space-y-3">
                 @foreach ($voting->options as $value)
-                    <button class="flex votings-center border-2 border-blue-500 text-black px-4 py-2 rounded hover:bg-blue-200 w-full text-left">
+                    <button class="flex items-center votings-center border-2 border-blue-500 text-black rounded h-20 hover:bg-blue-200 w-full text-left">
                         <!-- Gambar untuk opsi -->
                         @if ($value->image)
-                            <img src="{{ $value->option_image }}" alt="{{ $value->option_name }}" class="w-10 h-10 rounded-full mr-3">
+                            <img src="{{ asset('storage/'. $value->image) }}" alt="{{ $value->option_name }}" class="max-w-20 h-full object-cover  mr-3">
                         @endif
                         <!-- Nama opsi -->
                         {{ $value->option_name }}

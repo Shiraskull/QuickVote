@@ -11,6 +11,8 @@
         @if (request()->route()->getName() !== 'login')
             @livewire('header')
         @endif
+
+
         <main class=" flex-grow">
             {{ $slot }}
         </main>
@@ -19,6 +21,10 @@
             @livewire('footer')
         @endif
 
+        @if (session('modal'))
+            @livewire('modal-message')
+        @endif
+            <script src="{{ asset('js/modalMessage') }}"></script>
         @vite('resources/js/app.js')
     </body>
 </html>
